@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="abstract.js" server="79.99.166.44//" local="131727431706956204" remote="131080824000000000" Dst="2" />
+<file name="biginteger.js" server="79.99.166.44//" local="131727431708663790" remote="131080824000000000" Dst="2" />
+<file name="ast.js" server="79.99.166.44//" local="131727431708853507" remote="131080824000000000" Dst="2" />
+<file name="bool.js" server="79.99.166.44//" local="131727431709292170" remote="131080824000000000" Dst="2" />
+<file name="builtin.js" server="79.99.166.44//" local="131727431713721957" remote="131080824000000000" Dst="2" />
+<file name="builtindict.js" server="79.99.166.44//" local="131727431714319286" remote="131080824000000000" Dst="2" />
+<file name="compile.js" server="79.99.166.44//" local="131727431715028218" remote="131080824000000000" Dst="2" />
+<file name="constants.js" server="79.99.166.44//" local="131727431715178197" remote="131080824000000000" Dst="2" />
+<file name="complex.js" server="79.99.166.44//" local="131727431715367950" remote="131080824000000000" Dst="2" />
+<file name="dict.js" server="79.99.166.44//" local="131727431716684345" remote="131080824000000000" Dst="2" />
+<file name="env.js" server="79.99.166.44//" local="131727431716684345" remote="131080824000000000" Dst="2" />
+<file name="enumerate.js" server="79.99.166.44//" local="131727431716913935" remote="131080824000000000" Dst="2" />
+<file name="file.js" server="79.99.166.44//" local="131727431717768744" remote="131080824000000000" Dst="2" />
+<file name="errors.js" server="79.99.166.44//" local="131727431718104803" remote="131080824000000000" Dst="2" />
+<file name="ffi.js" server="79.99.166.44//" local="131727431718114456" remote="131080824000000000" Dst="2" />
+<file name="formatting.js" server="79.99.166.44//" local="131727431720259356" remote="131080824000000000" Dst="2" />
+<file name="fromcodepoint.js" server="79.99.166.44//" local="131727431720959869" remote="131080824000000000" Dst="2" />
+<file name="float.js" server="79.99.166.44//" local="131727431721419169" remote="131080824000000000" Dst="2" />
+<file name="function.js" server="79.99.166.44//" local="131727431722018321" remote="131080824000000000" Dst="2" />
+<file name="generator.js" server="79.99.166.44//" local="131727431722323937" remote="131080824000000000" Dst="2" />
+<file name="import.js" server="79.99.166.44//" local="131727431722553181" remote="131080824000000000" Dst="2" />
+<file name="int.js" server="79.99.166.44//" local="131727431723470954" remote="131080824000000000" Dst="2" />
+<file name="list.js" server="79.99.166.44//" local="131727432009708921" remote="131080824000000000" Dst="2" />
+<file name="method.js" server="79.99.166.44//" local="131727432010332349" remote="131080824000000000" Dst="2" />
+<file name="long.js" server="79.99.166.44//" local="131727432010681434" remote="131080824000000000" Dst="2" />
+<file name="misceval.js" server="79.99.166.44//" local="131727432011120700" remote="131080824000000000" Dst="2" />
+<file name="module.js" server="79.99.166.44//" local="131727432011459779" remote="131080824000000000" Dst="2" />
+<file name="native.js" server="79.99.166.44//" local="131727432012019145" remote="131080824000000000" Dst="2" />
+<file name="number.js" server="79.99.166.44//" local="131727432012767943" remote="131080824000000000" Dst="2" />
+<file name="numtype.js" server="79.99.166.44//" local="131727432013058032" remote="131080824000000000" Dst="2" />
+<file name="object.js" server="79.99.166.44//" local="131727432013207624" remote="131080824000000000" Dst="2" />
+<file name="parser.js" server="79.99.166.44//" local="131727432013814781" remote="131080824000000000" Dst="2" />
+<file name="print.js" server="79.99.166.44//" local="131727432021014781" remote="131080824000000000" Dst="2" />
+<file name="seqtype.js" server="79.99.166.44//" local="131727432022060145" remote="131080824000000000" Dst="2" />
+<file name="set.js" server="79.99.166.44//" local="131727432023074523" remote="131080824000000000" Dst="2" />
+<file name="slice.js" server="79.99.166.44//" local="131727432023074523" remote="131080824000000000" Dst="2" />
+<file name="sorted.js" server="79.99.166.44//" local="131727432023982351" remote="131080824000000000" Dst="2" />
+<file name="str.js" server="79.99.166.44//" local="131727432024732127" remote="131080824000000000" Dst="2" />
+<file name="timsort.js" server="79.99.166.44//" local="131727432029288841" remote="131080824000000000" Dst="2" />
+<file name="symtable.js" server="79.99.166.44//" local="131727432030545208" remote="131080824000000000" Dst="2" />
+<file name="structseq.js" server="79.99.166.44//" local="131727432031841754" remote="131080824000000000" Dst="2" />
+<file name="tokenize.js" server="79.99.166.44//" local="131727432032972925" remote="131080824000000000" Dst="2" />
+<file name="tuple.js" server="79.99.166.44//" local="131727432032982917" remote="131080824000000000" Dst="2" />
+<file name="type.js" server="79.99.166.44//" local="131727432033262292" remote="131080824000000000" Dst="2" />
+</dwsync>

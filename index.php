@@ -1,0 +1,215 @@
+<?php include dirname(__FILE__)."/version.php"; ?>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" manifest="manifest.appcache"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" manifest="manifest.appcache"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" manifest="manifest.appcache"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" manifest="manifest.appcache">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/lldlpeacadpdfaoekhaiphamkndjghgo">
+<title>Python Editor v<?php v(); ?> - 100% Free online editor for python file on Google Drive</title>
+<meta name="description" content="100% Free online editor for python file on Google Drive" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<link rel="icon" type="image/png" href="http://python.codnex.net/icons/doc16.png" />
+<link rel="preload" type="image/gif" href="http://python.codnex.net/icons/doc128.png" />
+<link rel="manifest" href="http://python.codnex.net/manifest.json">
+<!-- Safari for iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Python Editor v<?php v(); ?>">
+<meta name="format-detection" content="telephone=no">
+<link href="http://python.codnex.net/icons/doc128.png" sizes="128x128" rel="apple-touch-icon">
+<link href="http://python.codnex.net/icons/doc256.png" sizes="155x155" rel="apple-touch-icon">
+<!-- Microsoft -->
+<meta name="application-name" content="Python Editor v<?php v(); ?>">
+<meta name="msapplication-TileColor" content="#069">
+<meta name="msapplication-square70x70logo" content="http://python.codnex.net/icons/doc128.png">
+<meta name="msapplication-square150x150logo" content="http://python.codnex.net/icons/doc256.png">
+<meta name="msapplication-square310x310logo" content="http://python.codnex.net/icons/doc512.png">
+<!-- Facebook -->
+<meta property="og:title" content="Python Editor v<?php v(); ?>"/>
+<meta property="og:url" content="http://python.codnex.net/index.php"/>
+<meta property="og:site_name" content="Python Editor v<?php v(); ?>"/>
+<meta property="og:type" content="product"/>
+<meta property="og:image" content="icons/doc128.png"/>
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/flat-ui.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="libs/js/editor/codemirror.css">
+<link rel="stylesheet" type="text/css" href="libs/js/editor/addon/hint/show-hint.css">
+<link rel="stylesheet" type="text/css" href="libs/js/editor/addon/fold/foldgutter.css">
+<link rel="stylesheet" type="text/css" href="libs/js/editor/theme/xq-dark.css" id="theme_css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="libs/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="libs/js/Utils.class.js" type="text/javascript"></script>
+<script src="libs/js/Filepicker.class.js" type="text/javascript"></script>
+<script src="libs/js/editor/codemirror.js" type="text/javascript"></script>
+<script src="libs/js/editor/addon/hint/show-hint.js" type="text/javascript"></script>
+<script src="libs/js/editor/addon/fold/foldcode.js" type="text/javascript"></script>
+<script src="libs/js/editor/addon/fold/foldgutter.js" type="text/javascript"></script>
+<script src="libs/js/editor/addon/hint/anyword-hint.js" type="text/javascript"></script>
+<script src="libs/js/editor/addon/selection/active-line.js" type="text/javascript"></script>
+<script src="libs/js/editor/addon/selection/mark-selection.js" type="text/javascript"></script>
+<script src="libs/js/editor/mode/python/python.js" type="text/javascript"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15538849-30', 'python.codnex.net');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+</head>
+<body>             
+<header>
+    <nav class="col-xs-12">
+    	<span id="logo">Python Editor <?php v(true,true); ?> <span id="on-off"></span> <button id="menu-mobile" class="visible-xs"><i class="fa fa-bars"></i></button></span>
+        <span class="menu">
+            <button id="new"><i class="fa fa-file"></i> <span data-i18n="new">New</span></button>
+            <button id="open"><i class="fa fa-folder-open"></i> <span data-i18n="open">Open</span></button>
+            <button id="save"><i class="fa fa-floppy-o"></i> <span data-i18n="save">Save</span></button>
+            <button id="run"><i class="fa fa-play"></i> <span data-i18n="run">Run</span></button>
+			<!--<button id="search"><i class="fa fa-search"></i> <span data-i18n="search">Search</span></button>-->       
+            <button id="export"><i class="fa fa-download"></i> <span  data-i18n="export">Export</span></button>
+            <button id="filename">untitle.py</button>
+	  	<a href="privacy.php" target="_blank">Privacy</a>
+	  	<a href="https://chrome.google.com/webstore/detail/hijjijihobgghonbgfdgenpcmehecfln/" target="_blank"> [no ads ?] </a>
+            <a href="/donation.php" target="_blank" style="color:#fff"><i class="fa fa-coffee"></i> <span class="visible-xs" data-i18n="donation">donate !</span></a>
+            <div class="right">
+                <button id="params" data-toggle="modal" data-target="#parameters"><i class="fa fa-cog"></i> <span class="visible-xs" data-i18n="settings">settings</span></button>
+                <button id="fs" class="hidden-xs"><i class="fa fa-arrows-alt"></i></button>
+            </div>
+        </span>
+    </nav>
+    <div class="clearfix"></div>
+</header>
+<textarea id="editor">
+
+</textarea>
+<section id="searcharea"><input type="search" autocomplete="off" placeholder="" data-i18n-placeholder="search" /></section>
+<div class="modal fade" id="parameters" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" data-i18n="settings">Settings</h4>
+      </div>
+      <div class="modal-body">
+        <p><label for="resultwindow"><i>Open result in new window ?</i> <input type="checkbox" name="resultwindow" data-toggle="switch" id="resultwindow" /></label> </p>
+        <p><label for="theme"><i>Editor Theme</i> </label><select name="theme" id="theme" class="form-control select select-primary" data-toggle="select" style="border:1px solid #1ABC9C">
+    <option value="3024-day">3024-day</option>
+    <option value="3024-night">3024-night</option>
+    <option value="abcdef">abcdef</option>
+    <option value="ambiance">ambiance</option>
+    <option value="base16-dark">base16-dark</option>
+    <option value="base16-light">base16-light</option>
+    <option value="bespin">bespin</option>
+    <option value="blackboard">blackboard</option>
+    <option value="cobalt">cobalt</option>
+    <option value="colorforth">colorforth</option>
+    <option value="dracula">dracula</option>
+    <option value="eclipse">eclipse</option>
+    <option value="elegant">elegant</option>
+    <option value="erlang-dark">erlang-dark</option>
+    <option value="hopscotch">hopscotch</option>
+    <option value="icecoder">icecoder</option>
+    <option value="isotope">isotope</option>
+    <option value="lesser-dark">lesser-dark</option>
+    <option value="liquibyte">liquibyte</option>
+    <option value="material">material</option>
+    <option value="mbo">mbo</option>
+    <option value="mdn-like">mdn-like</option>
+    <option value="midnight">midnight</option>
+    <option value="monokai">monokai</option>
+    <option value="neat">neat</option>
+    <option value="neo">neo</option>
+    <option value="night">night</option>
+    <option value="paraiso-dark">paraiso-dark</option>
+    <option value="paraiso-light">paraiso-light</option>
+    <option value="pastel-on-dark">pastel-on-dark</option>
+    <option value="railscasts">railscasts</option>
+    <option value="rubyblue">rubyblue</option>
+    <option value="seti">seti</option>
+    <option value="the-matri">the-matrix</option>
+    <option value="tomorrow-night-bright">tomorrow-night-bright</option>
+    <option value="tomorrow-night-eightie">tomorrow-night-eighties</option>
+    <option value="ttcn">ttcn</option>
+    <option value="twilight">twilight</option>
+    <option value="vibrant-ink">vibrant-ink</option>
+    <option value="xq-dark" selected>xq-dark</option>
+    <option value="xq-light">xq-light</option>
+    <option value="yeti">yeti</option>
+    <option value="zenburn">zenburn</option>
+</select></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade  bs-example-modal-lg" id="other" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" >&nbsp;</h4>
+			</div>
+			<div class="modal-body">
+			
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade  bs-example-modal-lg" id="runner" tabindex="-1" role="dialog">
+	<div class="modal-dialog  modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" >&nbsp;</h4>
+			</div>
+			<div class="modal-body">
+			<div id="og"></div>
+			<pre id="ot"></pre>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade  bs-example-modal-lg" id="opener" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" data-i18n="openfilefrom">Open file from</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+				<label id="open_local" class="btn btn-default col-sm-12 col-md-6"> <i class="fa fa-folder-open fa-4x"></i><br>
+				<span data-i18n="openlocalfile">Open file from local drive</span>
+				<input type="file" name="localfile" id="localfile" style="display:none" accept="application/x-python">
+				</label>
+				<button id="open_gd" class="btn btn-default col-sm-12 col-md-6" data-require="GoogleDrive"> <i class="fa fa-cloud-download fa-4x"></i><br>
+				<span data-i18n="opengoogledrivefile">Open file from Google Drive</span> </button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="libs/js/vendor/flat-ui.min.js" type="text/javascript"></script>
+<script src="libs/js/skulpt/skulpt.min.js" type="text/javascript"></script>
+<script src="libs/js/skulpt/skulpt-stdlib.js" type="text/javascript"></script>
+<script src="libs/js/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	Utils.log.text(Utils.storage.local('version'));
+	if(Utils.storage.local('version')!='<?php v(); ?>'){
+		window.open("/update.php");
+		Utils.storage.local('version','<?php v(); ?>');	
+	}	
+});
+</script>
+</body>
+</html>

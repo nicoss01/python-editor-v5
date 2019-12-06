@@ -1,0 +1,118 @@
+<?php include dirname(__FILE__)."/version.php"; ?>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/lldlpeacadpdfaoekhaiphamkndjghgo">
+<title>Donation - Python Editor v
+<?php v(); ?>
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+<link rel="stylesheet" href="update/assets/css/main.css" />
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css?v=<?php v(); ?>">
+<noscript>
+<link rel="stylesheet" href="update/assets/css/noscript.css" />
+</noscript>
+<script src="update/assets/js/jq.js"></script>
+<script>
+var noescapemsg=true;
+</script>
+<script src="libs/js/Utils.class.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-15538849-30', 'python.codnex.net');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+<style>
+strong{
+	font-weight:bold;
+	text-decoration:underline;	
+}
+p[lang]{
+	display:none;	
+}
+</style>
+</head>
+<body class="is-loading">
+
+<!-- Wrapper -->
+<div id="wrapper"> 
+						
+						<!-- Main -->
+						<section id="main">
+												<header> <span class="avatar"><img src="icons/doc128.png" alt="" /></span>
+																		<h1>Python Editor <?php v(); ?></h1>
+																		
+																		<!--<h2>Now your editor is ads free</h2>-->
+												</header>
+												<hr />
+												<h2>Why should i donate ?</h2>
+												<p>To develop this tool i need a better web server and probably<br />have to hire someone to work on technical support.</p>
+												<h2>Donate with PayPal</h2>
+												
+ <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="X5WFYAXNVZLG8">
+<table align="center" width="100%">
+<tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
+	<option value="Option 1">Option 1 : $1,00 USD - <span data-i18n="mensuel">mensuel</span></option>
+	<option value="Option 2">Option 2 : $2,00 USD - <span data-i18n="mensuel">mensuel</span></option>
+	<option value="Option 3">Option 3 : $5,00 USD - <span data-i18n="mensuel">mensuel</span></option>
+	<option value="Option 4">Option 4 : $10,00 USD - <span data-i18n="mensuel">mensuel</span></option>
+	<option value="Option 5">Option 5 : $50,00 USD - <span data-i18n="mensuel">mensuel</span></option>
+	<option value="Option 6">Option 6 : $100,00 USD - <span data-i18n="mensuel">mensuel</span></option>
+</select> </td></tr>
+</table><br />
+<input type="hidden" name="currency_code" value="USD">
+<button type="submit" name="submit"><span data-i18n="souscrire">Subscribe</span> <i class="fa fa-paypal"></i></button>
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+<hr />
+<h2>Donate with BitCoin</h2>
+<p>This is my BitCoin address for donations:<br /><a href="bitcoin:1KXhQ5wGpzzRWJa6cZQ2XYL2bZN3ddLFby?label=Python%20Editor%20Donation" target="_blank">1KXhQ5wGpzzRWJa6cZQ2XYL2bZN3ddLFby</a></p>
+<p><img src="update/assets/bitcoin.png" width="150" height="57" alt=""/></p>
+<hr /><h2>Donate with Flattr</h2>
+<script id='fb2427h'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//button.flattr.com/view/?fid=51xvd7&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=62;f.width=55;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb2427h');</script>
+						</section>
+						
+						<!-- Footer -->
+						<footer id="footer">
+												<ul class="copyright">
+																		<li>&copy; Nicolas Grillet</li>
+																		<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+												</ul>
+						</footer>
+</div>
+
+<!-- Scripts --> 
+<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]--> 
+<script>
+if ('addEventListener' in window) {
+window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+}
+$(document).ready(function(e) {
+	var userLang = navigator.language || navigator.userLanguage; 
+	var lang=userLang.toLowerCase().split("-");
+	lang=lang[0];
+	if(lang=="fr"||lang=="en"||lang=="cn"||lang=="pt"||lang=="es"){
+		$("p[lang='"+lang+"']").show();
+	}else{
+		$("p[lang='en']").show();
+	}
+});
+</script>
+</body>
+</html>

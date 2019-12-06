@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Python Editor Run Window</title>
+<link rel='stylesheet' href='http://python.codnex.net/assets/css/bootstrap.min.css' type='text/css' />
+<link rel='stylesheet' href='http://python.codnex.net/assets/css/flat-ui.min.css' type='text/css' />
+<link rel='stylesheet' href='http://python.codnex.net/assets/css/runner.css' type='text/css' />
+<script src="libs/js/vendor/jquery.min.js"></script>
+<script>var detectAds = false;</script>
+<script src="libs/js/detect.js"></script>
+<script src="libs/js/Utils.class.js"></script>
+</head>
+<body>
+<div id='og'></div><pre id='ot'></pre>
+<script src="libs/js/skulpt/skulpt.min.js"></script>
+<script src="libs/js/skulpt/skulpt-stdlib.js"></script>
+<script type='text/javascript'>
+var output = $("#ot");
+var outf = function (text) {
+        output.text(output.text() + text);
+};
+function builtinRead(x) {
+        if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+        return Sk.builtinFiles["files"][x];
+ }
+var editor = window.opener.updateWindowParent();
+$("#ot").html("");
+var t = editor.getValue();
+var oo = /open\((.*)(,(.*))+\)/gi.exec(t);
+console.log(oo);
+for(i in oo){
+	if(oo[i][3]=='"r"'){
+		console.log("open file :"+oo[i][1]);	
+	}
+}
+Sk.configure({output: outf, read: builtinRead});
+Sk.canvas = "og";
+if (editor.getValue().indexOf('turtle') > -1 ) {
+	$('#og').show();
+}
+Sk.pre = "ot";
+(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'og';
+Sk.TurtleGraphics.width = ($(window).width()-100)/2;
+Sk.TurtleGraphics.height =($(window).height());
+
+var p = Sk.misceval.asyncToPromise(function() {
+	return Sk.importMainWithBody("<stdin>",false,editor.getValue(),true);
+});
+p.then(function (module) {
+	Utils.log.text("no errors");
+}, function (err) {
+	alert(err);
+});
+</script>
+</body>
+</html>
