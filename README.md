@@ -1,6 +1,8 @@
 # python-editor-v5 : This is not a goodbye
 Open Source files of Python Editor v5
 
+![alt text](https://github.com/nicoss01/python-editor-v5/blob/master/Stats.PNG)
+
 # [English]
 It's been five years now, that I launched Python Editor, on a simple observation: learn python from anywhere in the world.
 It was an amazing adventure, which allowed me to have more than 30,000 active users per month.
@@ -22,3 +24,7 @@ Je laisse donc le site actif pendant un mois, et le 1er janvier 2020 je le coupe
 
 Avec mes amités, Nicolas Grillet
 n.grillet01@gmail.com
+
+---
+
+https://python.codnex.net/donation.php
