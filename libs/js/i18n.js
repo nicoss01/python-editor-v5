@@ -79,11 +79,6 @@ i18n.init = function(){
 	i18n.lang = lang[0];
 	console.log(i18n.lang);
 	i18n.load();
-	docReady(function() {
-		console.log("Init translation process...");
-		i18n.getAllTranslationsNeeded();
-		i18n.translateAll();
-	});
 }
 i18n.load = function(lang){
 	console.log("Translation loading...");
@@ -93,11 +88,21 @@ i18n.load = function(lang){
 	el.setAttribute("src","libs/lang/"+(lang?lang:i18n.lang)+".js");
 	el.onerror = function() { 
 		i18n.load("en"); 
+		docReady(function() {
+			console.log("Init translation process...");
+			i18n.getAllTranslationsNeeded();
+			i18n.translateAll();
+		});
 	};
 	el.onload = function(){  
 		i18n.translations = T9N; 
 		console.log("Translations loaded !")
 		console.log(T9N);
+		docReady(function() {
+			console.log("Init translation process...");
+			i18n.getAllTranslationsNeeded();
+			i18n.translateAll();
+		});
 	};
 	document.getElementsByTagName("head")[0].appendChild(el);
 }
@@ -107,6 +112,7 @@ i18n.getAllTranslationsNeeded = function(){
 	var list = new Array();
 	for(i=0;i<a.length;i++){
 		var el = a[i].getAttribute("data-i18n");
+		console.log(
 		if(typeof i18n.translations[el] != "undefined"){
 			a[i].innerHTML=i18n.translations[el];
 			list.push(el+" : "+i18n.translations[el]);
