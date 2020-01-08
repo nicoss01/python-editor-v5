@@ -343,7 +343,7 @@ $(document).ready(function(e) {
 			Utils.notify(Utils.i18n.translate("newcreated"));
 		}
 	});
-	$("#save").click(function(e) {
+	/*$("#save").click(function(e) {
 		if(Filepicker.GoogleDrive.file.current==null){
 			Filepicker.GoogleDrive.folder.select(function(folder){
 				Filepicker.GoogleDrive.file.save(editor.getValue());
@@ -351,7 +351,7 @@ $(document).ready(function(e) {
 		}else{
 			Filepicker.GoogleDrive.file.save(editor.getValue());	
 		}
-	});
+	});*/
 	$("#filename").click(function(e) {
 		var content = editor.getValue();
 		var lines = content.split("\n");
@@ -452,5 +452,5 @@ $(document).ready(function(e) {
 		else
 			Utils.storage.local($(this).find("input").attr("id"),false);		
 	});
-	Filepicker.GoogleDrive.init();
+	/*Filepicker.GoogleDrive.init();*/
 });
