@@ -4,6 +4,7 @@ i18n.translations = {};
 i18n.init = function(){
 	var lang =  (navigator.language || navigator.userLanguage).split("-");
 	i18n.lang = lang[0];
+	console.log(i18n.lang);
 	i18n.load();
 	document.addEventListener("ready",function(){
 		i18n.getAllTranslationsNeeded();
@@ -30,7 +31,7 @@ i18n.getAllTranslationsNeeded = function(){
 		var el = a[i].getAttribute("data-i18n");
 		if(typeof i18n.translations[el] != "undefined"){
 			a[i].innerHTML=i18n.translations[el];
-			//list.push(el+" : "+i18n.translations[el]);
+			list.push(el+" : "+i18n.translations[el]);
 		}else{
 			list.push(el+" : NO TRANSLATION");
 		}
