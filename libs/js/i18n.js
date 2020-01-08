@@ -112,7 +112,7 @@ i18n.getAllTranslationsNeeded = function(){
 	var list = new Array();
 	for(i=0;i<a.length;i++){
 		var el = a[i].getAttribute("data-i18n");
-		console.log(
+		console.log(el,i18n.translations[el]);
 		if(typeof i18n.translations[el] != "undefined"){
 			a[i].innerHTML=i18n.translations[el];
 			list.push(el+" : "+i18n.translations[el]);
