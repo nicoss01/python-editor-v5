@@ -7,6 +7,7 @@ i18n.init = function(){
 	console.log(i18n.lang);
 	i18n.load();
 	document.addEventListener("ready",function(){
+		console.log("lancement traduction");
 		i18n.getAllTranslationsNeeded();
 		i18n.translateAll();
 	});
