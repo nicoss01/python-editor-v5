@@ -427,9 +427,8 @@ $(document).ready(function(e) {
 			}
 			Sk.pre = "ot";
 			(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'og';
-			$('#runner').modal("show");			
-			Sk.TurtleGraphics.width = ($('#runner .modal-content').width()-100);
-			Sk.TurtleGraphics.height =($('#runner .modal-content').width()-100);
+			Sk.TurtleGraphics.width = ($('#runner .modal-dialog').width()-100);
+			Sk.TurtleGraphics.height =($('#runner .modal-dialog').width()-100);
 			var p = Sk.misceval.asyncToPromise(function() {
 				return Sk.importMainWithBody("<stdin>",false,editor.getValue(),true);
 			});
@@ -438,6 +437,7 @@ $(document).ready(function(e) {
 			}, function (err) {
 				alert(err);
 			});
+			$('#runner').modal("show");			
 		}else{
 			window.name="python_editor";
 			w = window.open("runner.html","python_editor_runner");
