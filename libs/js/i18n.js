@@ -80,12 +80,13 @@ i18n.init = function(){
 	console.log(i18n.lang);
 	i18n.load();
 	docReady(function() {
-		console.log("lancement traduction");
+		console.log("Init translation process...");
 		i18n.getAllTranslationsNeeded();
 		i18n.translateAll();
 	});
 }
 i18n.load = function(lang){
+	console.log("Translation loading...");
 	var el = document.createElement("script");
 	el.setAttribute("type","text/javascript");
 	el.setAttribute("id","i18n_translation");
@@ -95,10 +96,13 @@ i18n.load = function(lang){
 	};
 	el.onload = function(){  
 		i18n.translations = T9N; 
+		console.log("Translations loaded !")
+		console.log(T9N);
 	};
 	document.getElementsByTagName("head")[0].appendChild(el);
 }
 i18n.getAllTranslationsNeeded = function(){
+	console.log("Translate each items in progress...");
 	var a = document.querySelectorAll("[data-i18n]");
 	var list = new Array();
 	for(i=0;i<a.length;i++){
