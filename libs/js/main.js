@@ -427,8 +427,8 @@ $(document).ready(function(e) {
 			}
 			Sk.pre = "ot";
 			(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'og';
-			Sk.TurtleGraphics.width = ($('#runner').width()-100);
-			Sk.TurtleGraphics.height =($('#runner').width()-100);
+			Sk.TurtleGraphics.width = ($('#runner .modal-content').width()-100);
+			Sk.TurtleGraphics.height =($('#runner .modal-content').width()-100);
 			var p = Sk.misceval.asyncToPromise(function() {
 				return Sk.importMainWithBody("<stdin>",false,editor.getValue(),true);
 			});
