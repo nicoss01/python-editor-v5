@@ -274,7 +274,7 @@ function builtinRead(x) {
         return Sk.builtinFiles["files"][x];
     }
 $(document).ready(function(e) {
-
+	$("#loader_block").fadeIn("fast");
 	
 	$("#open").click(function(e) {
 		$("#opener").modal("show");
