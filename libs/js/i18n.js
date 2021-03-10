@@ -77,7 +77,7 @@ i18n.translations = {};
 i18n.init = function(){
 	var lang =  (navigator.language || navigator.userLanguage).split("-");
 	i18n.lang = lang[0];
-	console.log(i18n.lang);
+	//console.log(i18n.lang);
 	i18n.load();
 }
 i18n.load = function(lang){
