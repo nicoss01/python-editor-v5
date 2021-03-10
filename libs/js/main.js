@@ -319,7 +319,7 @@ $(document).ready(function(e) {
 		lineWrapping: true,
 		scanUp:true,
 		autoMatchParens: true,
-		parserConfig: {'pythonVersion': 2, 'strictErrors': true}
+		parserConfig: {'pythonVersion': 3, 'strictErrors': true}
   	});
 	editor.setOption("theme", "xq-dark");
 	$("#theme").bind("change",function(){
