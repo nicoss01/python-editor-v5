@@ -1,6 +1,6 @@
 <?php
 ini_set("display_errors",0);
-$version = "5.3.5";
+$version = "5.3.6";
 function v($output=true,$html=false){
 	global $version;
 	$v = explode(".",$version);
