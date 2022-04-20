@@ -1,9 +1,9 @@
 var Filepicker 				= {};
 Filepicker.GoogleDrive 		= {};
 Filepicker.GoogleDrive.options = {
-	developerKey 	: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-	clientId		: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.apps.googleusercontent.com",
-	secret			: "XXXXXXXXXXXXXXXXXXXXXXXXXXx",
+	developerKey 	: Base64.decode("YVN5QTBfRWV5dm8xWUh3eFE0TFduSDdyb1NBQ3lPT0RjWEU0"),
+	clientId		: Base64.decode("MTA3MzcyNDg0OTYwLXJobnNhaTIyNzRianVmcnU0NWxwY3Z2MWZ0YXVtbGZsLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29t"),
+	secret			: Base64.decode("ekttNXZXZjJNTk1DUDkxQ0dTZy1wdC1y"),
 	scope			:  ['https://www.googleapis.com/auth/drive'],
 	oauthToken		: null
 };
