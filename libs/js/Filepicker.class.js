@@ -12,7 +12,7 @@ Filepicker.GoogleDrive.init = function(){
 	console.log(typeof gapi);
 	if(typeof gapi=="undefined"){
 		Utils.log.text("Google chargement...");
-		setTimeout(function(){
+		//setTimeout(function(){
 			var script = document.createElement("script");
 			script.src = "https://www.google.com/jsapi?key=" + Filepicker.GoogleDrive.options.developerKey;
 			script.onload = function () {
@@ -25,7 +25,7 @@ Filepicker.GoogleDrive.init = function(){
 				document.body.appendChild(script2);
 			};
 			document.body.appendChild(script);
-		},500);
+		//},500);
 	}else{
 		Filepicker_GoogleDrive();
 	}
