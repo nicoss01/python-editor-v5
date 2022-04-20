@@ -1,6 +1,7 @@
 CACHE MANIFEST
 # Version 5.8.1
 CACHE:
+
 /404/css/style.css
 
 /404/fonts/opensans_light_macroman/OpenSans-Light-webfont.eot
@@ -783,6 +784,7 @@ CACHE:
 /update/images/bg.jpg
 /update/update.html
 /update.html
+>>>>>>> 9a070ee6deb262c9ba41dd83b3376be07415c9b6
 
 SETTINGS:
 prefer-online
