@@ -12,20 +12,20 @@ Filepicker.GoogleDrive.init = function(){
 	console.log(typeof gapi);
 	if(typeof gapi=="undefined"){
 		Utils.log.text("Google chargement...");
-		window.addEventListener("load", (event) => {
-				var script = document.createElement("script");
-				script.src = "https://www.google.com/jsapi?key=" + Filepicker.GoogleDrive.options.developerKey;
-				script.onload = function () {
-					Utils.log.text("Google api loaded");
-					var script2 = document.createElement("script");
-					script2.src = "https://apis.google.com/js/client.js?onload=Filepicker_GoogleDrive";
-					script2.onload = function () {
-						Utils.log.text("Google drive api loaded");
-					};
-					document.body.appendChild(script2);
+		setTimeout(function(){
+			var script = document.createElement("script");
+			script.src = "https://www.google.com/jsapi?key=" + Filepicker.GoogleDrive.options.developerKey;
+			script.onload = function () {
+				Utils.log.text("Google api loaded");
+				var script2 = document.createElement("script");
+				script2.src = "https://apis.google.com/js/client.js?onload=Filepicker_GoogleDrive";
+				script2.onload = function () {
+					Utils.log.text("Google drive api loaded");
 				};
-				document.body.appendChild(script);
-			});
+				document.body.appendChild(script2);
+			};
+			document.body.appendChild(script);
+		},500);
 	}else{
 		Filepicker_GoogleDrive();
 	}
