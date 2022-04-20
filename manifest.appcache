@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# Version 5.8.1
+CACHE:
+index.html
+/icons
+/libs
+ 
+/home
+/home/index
+
+SETTINGS:
+prefer-online
+NETWORK:
+*
